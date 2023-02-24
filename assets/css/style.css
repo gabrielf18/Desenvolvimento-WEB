@@ -55,6 +55,10 @@ header {
     background-position: center;
 }
 
+/*
+    MENU
+*/
+
 .menu {
     flex: 1;
     display: flex;
@@ -90,6 +94,10 @@ header {
 .menu .active a {
     border-bottom: 5px solid var(--decopri);
 }
+
+/*
+    BANNER
+*/
 
 .banner {
     height: calc(100vh - 100px);
@@ -187,18 +195,18 @@ header {
 }
 
 .default .section-title {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .default .section-desc {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--descColor);
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
 .default .section-body {
-    background-color: pink;
+    background-color: var(--bgDefDark);
     max-width: 1140px;
     margin:auto;
     min-height: 100px;
@@ -218,4 +226,31 @@ header {
 
 .default.dark .section-title{
     color: var(--titColorDark);
+}
+
+/*
+    section - about us
+*/
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left {
+    flex: 1;
+}
+
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+}
+
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 15px 15px 15px #aaa9a9;
 }
