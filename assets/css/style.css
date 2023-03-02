@@ -12,6 +12,7 @@ Configurações Gerais
     --titColorLight: #000;
     --bgDefDark: #000;
     --titColorDark: #fff;
+    --textService: #999;
 }
 
 * {
@@ -263,4 +264,33 @@ section - About Us
 .section-aboutus--right img {
     width: 480px;
     box-shadow: 15px 15px 15px #aaa9a9;
+}
+
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid var(--textService);
+}
+
+.section-service:first-child {
+    border-left: 1px solid var(--textService);
+}
+
+.section-service h4 {
+    color: var(--textService);
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 0 45px;
+}
+
+.section-service p {
+    color: var(--textService);
+    font-size: 13px;
+    margin-top: 10px;
 }
