@@ -1,38 +1,109 @@
 /*
-    Configurações gerais
+Configurações Gerais
 */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-
-/*
-font-family: 'Montserrat', sans-serif;
-*/
-
 :root {
-    --bgcolor: #000;
-    --decopri: #b28756;
-    --corfont: #fff;
-    --menusele: rgba(255, 255, 255, 0.315);
-    --descColor: #ccc;
+    --decoPrinc: #b28756;
+    --bgColor: #000;
+    --fgColor: #fff;
+    --destaMenu: #ccc;
+    --descColorLight: #ccc;
     --bgDefLight: #f7f7f7;
+    --titColorLight: #000;
     --bgDefDark: #000;
     --titColorDark: #fff;
-    --titColorLight: #000;
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+
+body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
 }
+
+.button {
+    display: inline-block;
+    background-color: var(--decoPrinc);
+    color: var(--fgColor);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+/*
+Template das sections
+*/
+.default {
+    /*background-color: red;*/
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .section-title {
+    font-size: 20px;
+}
+
+.default .section-desc {
+    font-size: 12px;
+    color: var(--descColorLight);
+    margin-top: 10px;
+    margin-bottom: 40px
+}
+
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+
+    /*min-height: 100px;
+    background-color:#ccc;*/
+
+}
+
+.default.light {
+    background-color: var(--bgDefLight);
+}
+
+.default.light .section-title,
+.default.light .section-body {
+    color: var(--titColorLight);
+}
+
+.default.dark {
+    background-color: var(--bgDefDark);
+}
+
+.default.dark .section-title,
+.default.dark .section-body {
+    color: var(--titColorDark);
+}
+
+/*
+Cabeçalho
+*/
 
 header {
     height: 100px;
-    background-color: var(--bgcolor);
+    background-color: var(--bgColor);
+    color: var(--fgColor);
 }
 
 .header {
@@ -50,20 +121,20 @@ header {
 .logoimg {
     width: 80px;
     height: 80px;
-    background-image: url("../image/logo.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 /*
-    MENU
+Menu
 */
-
 .menu {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
+
 .menu ul,
 .menu li {
     list-style: none;
@@ -74,7 +145,7 @@ header {
 }
 
 .menu li a {
-    color: var(--corfont);
+    color: var(--fgColor);
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
@@ -83,26 +154,24 @@ header {
     height: 100px;
     display: flex;
     align-items: center;
-    border-bottom: 5px solid var(--bgcolor);
+    border-bottom: 5px solid var(--bgColor);
 }
 
-.menu li a:hover {
-    border-bottom: 5px solid var(--decopri);
-    color: var(--menusele);
-}
-
+.menu li a:hover,
 .menu .active a {
-    border-bottom: 5px solid var(--decopri);
+    border-bottom: 5px solid var(--decoPrinc);
+    color: var(--destaMenu);
 }
-
 /*
-    BANNER
+Banner - sliders
 */
 
 .banner {
+    /*height: 100vh;*/
     height: calc(100vh - 100px);
-    background-color: #131313; 
-    background-image: url("../image/bg.jpg");
+    /*background-color: red;*/
+    background-color: #131313;
+    background-image: url("../images/bg.jpg");
     background-size: cover;
     background-position: bottom;
     overflow: hidden;
@@ -111,13 +180,14 @@ header {
 .banner .sliders {
     width: 1000vw;
     height: 100%;
+    /*background-color: red;*/
 }
 
-.banner .slider {
+.banner .slide {
     width: calc(100vw + 4px);
     height: 100%;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
     margin-left: -4px;
 }
 
@@ -127,7 +197,7 @@ header {
     height: 100%;
     justify-content: center;
     align-items: center;
-    color: var(--corfont);
+    color: var(--fgColor);
 }
 
 .banner h1 {
@@ -136,8 +206,8 @@ header {
     font-size: 50px;
 }
 
-.banner span {
-    color: var(--decopri);
+.banner h1 span {
+    color: var(--decoPrinc);
 }
 
 .banner h2 {
@@ -145,22 +215,10 @@ header {
     margin-top: 20px;
 }
 
-.banner a {
-    display: block;
-    background-color: var(--decopri);
-    color: var(--corfont);
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 20px;
-    margin-top: 15px;
-}
-
 .banner .sliders-pointers {
     width: 100vw;
     height: 20px;
+    /*background-color: red;*/
     position: absolute;
     margin-top: -50px;
     display: flex;
@@ -171,67 +229,19 @@ header {
 .banner .pointer {
     width: 15px;
     height: 15px;
-    border: 2px solid var(--decopri);
+    border: 2px solid var(--decoPrinc);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .banner .pointer.active {
-    background-color: var(--decopri);
-}
-
-.default {
-    background-color: orangered;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.default .section-title, .defautl .section-desc {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.default .section-title {
-    font-size: 22px;
-}
-
-.default .section-desc {
-    font-size: 14px;
-    color: var(--descColor);
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-.default .section-body {
-    background-color: var(--bgDefDark);
-    max-width: 1140px;
-    margin:auto;
-    min-height: 100px;
-}
-
-.default.light {
-    background-color: var(--bgDefLight);
-}
-
-.default.light .section-title {
-    color: var(--titColorLight);
-}
-
-.default.dark {
-    background-color: var(--bgDefDark);
-}
-
-.default.dark .section-title{
-    color: var(--titColorDark);
+    background-color: var(--decoPrinc);
 }
 
 /*
-    section - about us
+section - About Us
 */
-
 .section-aboutus {
     display: flex;
 }
