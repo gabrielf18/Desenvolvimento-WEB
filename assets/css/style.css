@@ -365,3 +365,31 @@ section - About Us
     height: inherit;
 }
 
+.section-projects--photoinfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0, 7);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--destaMenu);
+    flex-direction: column;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.section-projects--photoinfo p {
+    font-size: 13px;
+    padding: 10px 40px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo {
+    display: flex;
+    cursor: pointer;
+}
