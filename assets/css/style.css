@@ -763,7 +763,7 @@ footer {
 }
 
 .footer-social a {
-    display: block;
+    display: flex;
     width: 25px;
     height: 25px;
     background-color: var(--fgFiltroProj);
@@ -804,5 +804,5 @@ footer {
     color: var(--fgColor);
     font-size: 14px;
     text-align: center;
-    
+
 }
